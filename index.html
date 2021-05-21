@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="grid">
+    <section class="welcome-page">
+        <div class="aside">
+            <h1 class="nav-title">Magdalena Kuźnik</h1>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a>O mnie</a></li>
+                    <li><a>Oferta</a></li>
+                    <li><a>Gdzie przyjmuję</a></li>
+                    <li><a>Terapia</a></li>
+                </ul>
+            </nav>
+            <div class="nav_mobile">
+                <div onclick="showNav()" class="nav_mobile--open"></div>
+                <div class="nav_mobile--exit"></div>
+            </div>
+        </div>
+        <header class="welcome-page__text">
+            <p>Witaj</p>
+            <h2>Jestem <span class="bold">psychologiem</span> i <span class="bold">psychoterapeutą</span> poznawczo-behawioralnym</h2>
+            <p>Zapraszam Cię do zapoznania się z moją ofertą</p>
+        </header>
+        <div class="nav__mobile-view"></div>
+    </section>
+    <section class="about-me">
+        <h3 class="section-title">O mnie</h3>
+        <h4>Zawodowo</h4>
+        <p>Jestem psychologiem oraz psychoterapeutą poznawczo-behawioralnym w procesie certyfikacji na
+            Uniwersytecie SWPS w Katowicach.</p>
+        <p>Należę do Polskiego Towarzystwa Terapii Poznawczej i Behawioralnej (PTTPB), a a swojej pracy kieruję się
+            Kodeksem Etycznym PTTPB. Prowadzoną przeze mnie psychoterapię poddaję superwizji certyfikowanych
+            superwizorów.
+            Na co dzień pracuję z dziećmi, młodzieżą i dorosłymi w poradni specjalistycznej i oddziałach Górnośląskiego
+            Centrum Zdrowia Dziecka oraz prowadzę psychoterapię indywidulaną osób dorosłych i nastolatków.</p>
+        <p>Posiadam również doświadczenie jako psycholog szkolny oraz w poradni psychologiczno-pedagogicznej i na
+            oddziałach szpitalnych.</p>
+        <div class="more"><p>Swoją wiedzą dzielę się na konferencjach, m.in.:
+            - Jak motywować chorego na cukrzycę. Punkt widzenia psychologa: VI Ogólnopolska Konferencja „Cukrzyca. Od
+            teorii do codziennej praktyki”. 1-2.03.2019, Katowice
+            - Jak zachęcić dzieci i ich opiekunów do prozdrowotnego stylu życia: Wojewódzka Konferencja „Czym skorupka
+            za młodu nasiąknie tym na starość trąci… Aktualne polskie i międzynarodowe rekomendacje zdrowego
+            odżywiania dzieci”. 6.06.2018, Katowice</p>
+            <p>Chętnie rozwijam swoje umiejętności oraz poszerzam wiedzę poprzez uczestnictwo w szkoleniach, m.in.:
+                Racjonalna Terapia Zachowania,
+                Zasady prowadzenia grup wsparcia,
+                Dialog Motywujący,
+                Certyfikowany Partner Centrum Zdrowia Psychicznego.</p>
+            <h3>Prywatnie</h3>
+            <p>Uwielbiam czas z rodziną i przyjaciółmi przy dobrej kawie czy też, chwilę dla siebie na świeżym
+                powietrzu. A
+                kiedy mam więcej czasu, lubię odkrywać ciekawe miejsca blisko i daleko.</p></div>
+        <button onclick="readMore(this)" class="moreBtn" data-title="Mniej">Więcej</button>
+    </section>
+    <section class="about-me-picture">
+        <div><img class="img-Magda" src="images/Magda.jpg" alt="Magdalena Kuźnik"></div>
+    </section>
+    <section class="offer">
+        <h3 class="section-title">Oferta</h3>
+        <p>Oferuję konsultacje psychologiczne i
+            psychoterapię indywidualną pomagające w
+            następujących trudnościach:</p>
+        <ul>
+            <li>zburzenia lękowe (ataki paniki, zamartwianie się,
+                fobie),
+            </li>
+            <li>zaburzenia odżywiania,</li>
+            <li>zaburzenia obsesyjno-kompulsywne,</li>
+            <li>zaburzenia związane ze stresem,</li>
+            <li>zaburzenia związane z objawami somatycznymi,</li>
+            <li>depresja,</li>
+            <li>kryzysy związane z sytuacją życiową.</li>
+        </ul>
+        <p>Cena za 50 min 120 zł</p>
+    </section>
+    <section class="contact">
+        <h3 class="section-title">Gdzie przyjmuję</h3>
+        <p>Zapraszam na spotkanie w ramach
+            Centrum Rozwoju Osobistego „Syntonia”
+            w Katowicach i Mikołowie. Możemy
+            spotkać się osobiście lub online.</p>
+        <p>Zadzwoń lub zgłoś się przez formularz.</p>
+        <p>Umów się na spotkanie ze mną
+            dzwoniąc na rejestrację centrum xxxx
+            lub prześlij wiadomość poprzez
+            formularz zgłoszeniowy na stronie
+            centrum.</p>
+    </section>
+    <section class="contact-znany-lekarz">Widget ze znanego lekarza</section>
+    <section class="therapy">
+        <h3 class="section-title">Terapia</h3>
+        <p>Terapia poznawczo-behawioralna to nurt psychoterapii zakładający poprawę jakości życia poprzez modyfikację
+            zachowania i sposobu myślenia.</p>
+        <p>Tego rodzaju terapię cechuje:</p>
+        <ul>
+            <li>oparcie na współpracy między terapeutą a pacjentem,</li>
+            <li>zorientowanie na rozwiązanie problemu,</li>
+            <li>skupienie na teraźniejszości,</li>
+            <li>ograniczenie w czasie oraz stosowanie odpowiednich technik terapeutycznych.</li>
+        </ul>
+        <p>Skuteczność oddziaływań psychoterapeutycznych jest poddawana ocenie, analogicznie do oceny skuteczności
+            farmakoterapii — w badaniach eksperymentalnych wpisanych w nurt medycyny opartej na dowodach naukowych
+            (EBM, evidence based medicine).</p>
+        <div class="more"><p>Terapia poznawczo-behawioralna przeszła w ciągu niemal 80 lat ewolucję, od terapii
+            behawioralnej,
+            poprzez poznawczą, do form terapii określanych obecnie mianem „trzeciej fali”. Należy do niej między innymi:
+            terapia oparta na akceptacji i zaangażowaniu (ACT, acceptance and committment therapy), którą jej twórca
+            Steven Hayes; dialektyczna terapia behawioralna (DBT, dialectical behavior therapy). Do technik terapii
+            trzeciej
+            fali włączono uważność (mindfullness), która jest metodą medytacji.</p></div>
+        <button onclick="readMore(this)" class="moreBtn">Więcej</button>
+    </section>
+    <section class="blog"></section>
+    <section class="materials"></section>
+    <footer></footer>
+
+  <div>
+      <h3 style="text-align: center;"><a style="a:hover: #18a8ab;" href="https://centrumterapiisocratic.pl/service/psychoterapia-poznawczo-behawioralna/">Psychoterapia poznawczo-behawioralna</a></h3>
+      <h3 style="text-align: center;"><a style="a: hover: #18a8ab;" href="https://centrumterapiisocratic.pl/service/psychoterapia-poznawczo-behawioralna/">Psychoterapia poznawczo-behawioralna</a></h3>
+      <h3 style="text-align: center;"><a style="a: hover: #18a8ab;" href="https://centrumterapiisocratic.pl/service/psychoterapia-poznawczo-behawioralna/">Psychoterapia poznawczo-behawioralna</a></h3>
+  </div>
+
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
