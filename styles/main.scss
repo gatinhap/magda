@@ -1,0 +1,209 @@
+@import "reset";
+@import "variables";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name)
+}
+
+;
+
+@function size($font-size) {
+  @return map-get($font-sizes, $font-size)
+}
+
+;
+
+body {
+  font-family: $primary-font;
+}
+
+.bold {
+  font-weight: weight(bold);
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:"welcome-page"
+                        "about-me"
+                        "about-me-picture"
+                        "offer"
+                        "contact"
+                        "contact-znany-lekarz"
+                        "therapy";
+  grid-template-rows:  100vh repeat(6, auto);
+  position: relative;
+
+  section {
+    padding: 1em;
+  }
+}
+
+.welcome-page {
+  grid-area: welcome-page;
+  background: linear-gradient(to right, $primary-color-light 70%, transparent 0%);
+}
+
+.about-me {
+  grid-area: about-me;
+}
+
+.about-me-picture {
+  grid-area: about-me-picture;
+}
+
+.offer {
+  grid-area: offer;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.contact-znany-lekarz {
+  grid-area: contact-znany-lekarz;
+  justify-self: flex-start;
+}
+
+.therapy {
+  grid-area: therapy;
+}
+
+.blog {
+  grid-area: blog;
+  display: none;
+}
+
+.materials {
+  grid-area: materials;
+  display: none;
+}
+
+.section-title {
+  border-bottom: $primary-color-dark solid 2px;
+  padding-bottom: 1em;
+  font-size: size(title);
+  letter-spacing: 1px;
+  font-weight: weight(bold);
+}
+
+.section-subtitle {
+  font-size: size(subtitle);
+  font-weight: weight(bold);
+}
+
+.aside {
+  display: flex;
+}
+
+.aside__nav {
+  display: none;
+}
+
+.aside__title {
+  font-size: size(title);
+  border-bottom: $primary-color-dark solid 1px;
+  padding-bottom: 0.5em;
+}
+
+.welcome-page__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 66%;
+  font-size: size(title);
+}
+
+.aside__nav--mobile--open {
+  color: #000;
+  position: absolute;
+  right: 22px;
+  margin-top: 34px;
+  width: 27px;
+  height: 4px;
+  background-color: $primary-color-dark;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 0;
+    width: 27px;
+    height: 4px;
+    background-color: $primary-color-dark;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 27px;
+    height: 4px;
+    background-color: $primary-color-dark;
+  }
+}
+
+.aside__nav--mobile--exit {
+  position: absolute;
+  display: none;
+  right: 22px;
+  margin-top: 18px;
+  width: 26px;
+  height: 26px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 26px;
+    height: 4px;
+    background-color: $primary-color-dark;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 26px;
+    height: 4px;
+    background-color: $primary-color-dark;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.aside.responsive {
+  .aside__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    background-color: rgba(248, 210, 196, 0.95);
+  }
+
+  .aside__nav__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+    font-weight: weight(bold);
+    letter-spacing: 1px;
+    list-style-type: none;
+    text-transform: uppercase;
+  }
+
+  .aside__nav--mobile--open {
+    display: none;
+  }
+
+  .aside__nav--mobile--exit {
+    display: initial;
+  }
+}
+

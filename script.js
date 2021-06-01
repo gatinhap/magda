@@ -26,13 +26,13 @@ function hideNav() {
     element.classList.remove("responsive");
 }
 
-const menuItems = document.querySelectorAll(".nav__list li");
+const menuItems = document.querySelectorAll(".aside__nav__list li");
 
 menuItems.forEach(function (menuItem) {
     menuItem.addEventListener("click", hideNav);
 });
 
-const exitMenu = document.querySelector('.nav_mobile--exit');
+const exitMenu = document.querySelector('.aside__nav--mobile--exit');
 
 exitMenu.addEventListener("click", hideNav);
 

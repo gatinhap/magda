@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+a:link, a:visited {
+  color: initial;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "welcome-page" "about-me" "about-me-picture" "offer" "contact" "contact-znany-lekarz" "therapy";
+  grid-template-rows: 100vh repeat(6, auto);
+  position: relative;
+}
+.grid section {
+  padding: 1em;
+}
+
+.welcome-page {
+  grid-area: welcome-page;
+  background: linear-gradient(to right, #F8D2C4 70%, transparent 0%);
+}
+
+.about-me {
+  grid-area: about-me;
+}
+
+.about-me-picture {
+  grid-area: about-me-picture;
+}
+
+.offer {
+  grid-area: offer;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.contact-znany-lekarz {
+  grid-area: contact-znany-lekarz;
+  justify-self: flex-start;
+}
+
+.therapy {
+  grid-area: therapy;
+}
+
+.blog {
+  grid-area: blog;
+  display: none;
+}
+
+.materials {
+  grid-area: materials;
+  display: none;
+}
+
+.section-title {
+  border-bottom: #171F32 solid 2px;
+  padding-bottom: 1em;
+  font-size: 23px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.aside {
+  display: flex;
+}
+
+.aside__nav {
+  display: none;
+}
+
+.aside__title {
+  font-size: 23px;
+  border-bottom: #171F32 solid 1px;
+  padding-bottom: 0.5em;
+}
+
+.welcome-page__text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 66%;
+  font-size: 23px;
+}
+
+.aside__nav--mobile--open {
+  color: #000;
+  position: absolute;
+  right: 22px;
+  margin-top: 34px;
+  width: 27px;
+  height: 4px;
+  background-color: #171F32;
+}
+.aside__nav--mobile--open:before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 27px;
+  height: 4px;
+  background-color: #171F32;
+}
+.aside__nav--mobile--open:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 27px;
+  height: 4px;
+  background-color: #171F32;
+}
+
+.aside__nav--mobile--exit {
+  position: absolute;
+  display: none;
+  right: 22px;
+  margin-top: 18px;
+  width: 26px;
+  height: 26px;
+}
+.aside__nav--mobile--exit:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 26px;
+  height: 4px;
+  background-color: #171F32;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.aside__nav--mobile--exit:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 26px;
+  height: 4px;
+  background-color: #171F32;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.aside.responsive .aside__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  background-color: rgba(248, 210, 196, 0.95);
+}
+.aside.responsive .aside__nav__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  height: 100vh;
+  font-weight: 700;
+  letter-spacing: 1px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+.aside.responsive .aside__nav--mobile--open {
+  display: none;
+}
+.aside.responsive .aside__nav--mobile--exit {
+  display: initial;
+}
+
+/*# sourceMappingURL=main.css.map */
